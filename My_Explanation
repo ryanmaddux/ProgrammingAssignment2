@@ -1,0 +1,40 @@
+Here are some things to note that may help you use this function
+
+First, load the the functions into R.
+
+To do this, change the directory to wherever you saved this function
+
+setwd("Insert_Your_Directory_Here")
+
+Next, source the functions
+
+source("cachematrix.R")
+
+Now, define a matrix.  For example:
+
+f <- matrix(2:5, 2, 2)
+
+Next, create the "special" object that stores info about the vector and store it.  For example:
+
+fortheguild <- makeCacheMatrix(f)
+
+Next, run the cacheSolve function on the list we just created
+
+cacheSolve(fortheguild)
+
+You should get a reasonable output.  For example:
+
+     [,1] [,2]
+[1,]   -3  2.5
+[2,]    2 -1.5
+
+Now, run it again:
+
+cacheSolve(fortheguild)
+
+getting cached data
+     [,1] [,2]
+[1,]   -3  2.5
+[2,]    2 -1.5
+
+Shazam!
